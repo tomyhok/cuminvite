@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Comic Sans MS',cursive;
+    src: url("comic-sans-ms/comici.ttf");
+}
+
 body {
     color:#ffffff;
     background-color: #5d0097;
@@ -14,28 +19,23 @@ body {
     flex-direction:column;
     min-height:100vh;
     overflow-x:hidden;
-
-    @font-face {
-        font-family: 'Comic Sans MS',cursive;
-        src: url("comic-sans-ms/comici.ttf");
-    }
 }
 
 html {
     font-size: 32px;
 
     @media screen and (max-width:1160px) {
-        font-size: 14px;
+        font-size: 20px;
         overflow-x: hidden;
     }
 
     @media screen and (max-width:900px) {
-        font-size: 12px;
+        font-size: 16px;
         overflow-x: hidden;
     }
 
     @media screen and (max-width:300px) {
-        font-size: 8px;
+        font-size: 12px;
         overflow-x: hidden;
     }
 }
@@ -71,7 +71,8 @@ main h2 {
 #container {
     display:flex;
     justify-content:left;
-    margin:3rem 3rem;
+    margin:3rem;
+    margin-bottom:0;
     font-size: 1rem;
     flex-direction: row;
     align-items:center;
@@ -108,7 +109,8 @@ main h2 {
         flex-direction:column;
         align-items:center;
         flex-wrap:wrap;
-        margin: 3rem auto;
+        margin: 3rem;
+        margin-bottom:0;
         max-width:90%;
     }
     #container img {
@@ -129,6 +131,9 @@ main h2 {
     }
     header {
         text-align:center;
+    }
+    #como_llegar{
+        margin-top:0;
     }
 }
 
