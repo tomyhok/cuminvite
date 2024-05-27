@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Comic Sans MS',cursive;
+    src: url("comic-sans-ms/comici.ttf");
+  }
+
 body {
     color:#ffffff;
     background-color: #5d0097;
@@ -13,6 +18,7 @@ body {
     display:flex;
     flex-direction:column;
     min-height:100vh;
+    overflow-x:hidden;
 }
 
 html {
@@ -20,21 +26,19 @@ html {
 
     @media screen and (max-width:1160px) {
         font-size: 14px;
+        overflow-x: hidden;
     }
 
     @media screen and (max-width:900px) {
         font-size: 12px;
+        overflow-x: hidden;
     }
 
     @media screen and (max-width:300px) {
         font-size: 8px;
+        overflow-x: hidden;
     }
 }
-
-@font-face {
-    font-family: 'Comic Sans MS';
-    src: url("comic-sans-ms/comici.ttf");
-  }
 
 header {
     background-color: #5d0097;
