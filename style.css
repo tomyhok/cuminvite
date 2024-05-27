@@ -16,9 +16,9 @@ body {
     overflow-x:hidden;
 
     @font-face {
-    font-family: 'Comic Sans MS',cursive;
-    src: url("comic-sans-ms/comici.ttf");
-      }
+        font-family: 'Comic Sans MS',cursive;
+        src: url("comic-sans-ms/comici.ttf");
+    }
 }
 
 html {
@@ -138,6 +138,11 @@ main h2 {
     justify-content: center;
     text-align:center;
     margin:2rem;
+}
+
+#como_llegar iframe {
+    width: 60vw;
+    height: 40vh;
 }
 
 form {
