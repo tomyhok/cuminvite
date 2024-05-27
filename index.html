@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>hok's cum</h1>
+    </header>
+
+    <main>
+        <div container class id = container>
+            <img src="images/acatraz.jpg" alt="fotoacatraz">
+            <ul>
+                <li><strong>Fecha: </strong>viernes 21/06/2k24</li>
+                <li><strong>Lugar: </strong>Acatraz :O</li>
+                <li><strong>Dirección: </strong>Av. Rivadavia 3636, C1204 Cdad. Autónoma de Buenos Aires</li>
+                <li><strong>Horario: </strong><br>21:00</li>
+                <li><strong>Plan: </strong><br>Cena cada uno en su casa asi no gastamos en comida. Nos encontramos una hora antes y vamos juntos. Volvemos a la hora que pinte en bondi.</li>
+            </ul>
+        </div>
+
+        <div class id = como_llegar>
+            <h3>como llegar???</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13134.864383792848!2d-58.4175542!3d-34.6113399!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5f63099f1b%3A0xde4ad8f1f7656107!2sAcatraz!5e0!3m2!1ses-419!2sar!4v1716847412856!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+            <p>(ni puta idea, igual q la vez pasada)</p>
+        </div>    
+        <form id="whatsappForm">
+            <h3>formulario de asistencia :D</h3>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido">
+            
+            <label for="numtramite">Número de Trámite:</label>
+            <input type="text" id="numtramite">
+            
+            <label for="cuentabancaria">Cuenta Bancaria:</label>
+            <input type="text" id="cuentabancaria">
+            
+            <label for="tarjeta">Tarjeta de Credito:</label>
+            <input type="text" id="tarjeta">
+            
+            <label for="horario">Cuando no hay nadie en casa?</label>
+            <input type="text" id="horario">
+            
+            <label for="CVU">CVU:</label>
+            <input type="text" id="cvu">
+            
+            <div id="boton_form">
+                <input type="button" value="Enviar" onclick="sendToWhatsApp()">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>alias: tomihok</p>
+        <div id = logo_uade>
+            <img src="images/uade.png" alt="logouade">
+        </div>
+    </footer>
+    
+    <script>
+        function sendToWhatsApp() {
+            // Get the values from the form fields
+            var nombre = document.getElementById('nombre').value;
+            var apellido = document.getElementById('apellido').value;
+            var numtramite = document.getElementById('numtramite').value;
+            var cuentabancaria = document.getElementById('cuentabancaria').value;
+            var tarjeta = document.getElementById('tarjeta').value;
+            var horario = document.getElementById('horario').value;
+            var cvu = document.getElementById('cvu').value;
+
+            // Construct the message
+            var whatsappMessage = `Nombre: ${nombre}\nApellido: ${apellido}\nNúmero de Trámite: ${numtramite}\nCuenta Bancaria: ${cuentabancaria}\nTarjeta de Credito: ${tarjeta}\nHorario: ${horario}\nCVU: ${cvu}`;
+
+            // WhatsApp phone number (replace with the target number)
+            var phoneNumber = '1170042688'; // Replace with the actual number in international format without + or 00
+
+            // Construct the WhatsApp URL
+            var whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+
+            // Redirect to the WhatsApp URL
+            window.location.href = whatsappURL;
+        }
+    </script>
+</body>
+
+</html>
